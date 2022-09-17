@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap');
+*{margin: 0;padding: 0; outline: 0;}
+
+body{
+    max-width: 1800px;
+    max-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    background-image:url("assets/pexels-ekaterina-bolovtsova-6077326.jpg");
+    clip-path: polygon(0 40%, 100% 40%, 100% 90%, 0 90%);
+    background-position:top left;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+body::before{
+    background-color:#2B2922;
+}
+
+nav{
+    max-width: 100vw;
+    display: flex;
+    padding: 10px 20px;
+}
+
+
+.logo{width: 20%;margin-left: auto;}
+.logo img{width: 100px;}
+
+
+.list{width: 60%;margin-left: auto;}
+.list ul{list-style: none; float: right;display: flex;}
+.list-item{
+    margin:10px 25px 10px 0;
+    color: #adadad;
+    font-size: 0.7rem;
+    font-weight: 200;
+}
+.list-item:hover{color: #fff;}
+
+
+.navbar > div:last-child
+{
+    width: 20%;
+    margin-left: auto;
+} 
+.button-small
+{
+    padding: 10px 30px;
+    background-color: transparent;
+    border: 1px solid yellow;
+    color: yellow;
+    border-radius: 10px;
+}
+.hero{
+    height: 80vh;
+    width: 100%;
+    padding: 10px 30px;
+}
+.div-left{
+    width: 50%;
+    float: left;
+    height: 25vh;
+    background-color: blue;
+}
+.div-right{
+    height: 25vh;
+    background-color: red;
+    width:50%;
+    float: right;
+    /* padding: 30px; */
+    text-align: left;
+}
+.div-left h1{
+    color: #fff;
+    width: 80%;
+    font-family: 'Montserrat', sans-serif;
+ font-size:3.5rem;
+ font-weight: 800;
+ margin: auto;
+}
+.div-right p{
+    width: 50%;
+    background-color: green;
+    margin-top:10px;
+    letter-spacing: 1px;
+    line-height: 25px;
+}
