@@ -1,86 +1,196 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap');
-*{margin: 0;padding: 0; outline: 0;}
 
-body{
-    max-width: 1800px;
-    max-height: 100vh;
-    font-family: 'Montserrat', sans-serif;
-    background-image:url("assets/pexels-ekaterina-bolovtsova-6077326.jpg");
-    clip-path: polygon(0 40%, 100% 40%, 100% 90%, 0 90%);
-    background-position:top left;
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+.container {
+    min-height: 100vh;
+    height: 100%;
+    position: relative;
+    background-image: url("assets/pexels-ekaterina-bolovtsova-6077326.jpg");
+    background-size: cover;
     background-repeat: no-repeat;
-    background-size:cover;
-}
-body::before{
-    background-color:#2B2922;
-}
-
-nav{
-    max-width: 100vw;
-    display: flex;
-    padding: 10px 20px;
+    background-position: top left;
 }
 
 
-.logo{width: 20%;margin-left: auto;}
-.logo img{width: 100px;}
+/* styling navigation menue */
+nav {
+    background-color: #2B2922;
+    width:100%;
+    height: 12vh;
+    padding-top: 20px;
+}
 
 
-.list{width: 60%;margin-left: auto;}
-.list ul{list-style: none; float: right;display: flex;}
-.list-item{
-    margin:10px 25px 10px 0;
+.logo {
+    width: 10%;
+    display: inline-block;
+}
+
+.logo img {
+    width: 100%;
+    padding-left: 10px;
+}
+
+
+.list {
+    width: 70%;
+    margin-left: auto;
+    display: inline-block;
+}
+
+.list ul {
+    list-style: none;
+    float: right;
+}
+
+.list ul li {
+    font-size: 1.2rem;
+    display: inline-block;
+}
+
+.list-item {
+    margin: 10px 25px 10px 0;
     color: #adadad;
     font-size: 0.7rem;
     font-weight: 200;
 }
-.list-item:hover{color: #fff;}
+
+.list-item:hover,.list-item.active{
+    color: #fff;
+}
 
 
-.navbar > div:last-child
-{
-    width: 20%;
-    margin-left: auto;
-} 
-.button-small
-{
+.navbar  div:last-of-type {
+    width: 18%;
+    display: inline-block;
+    float: right;
+    padding-top: 10px;
+}
+
+.button-small {
     padding: 10px 30px;
     background-color: transparent;
-    border: 1px solid yellow;
-    color: yellow;
+    border: 1px solid #a48a07;
+    color: #a48a07;
     border-radius: 10px;
 }
-.hero{
-    height: 80vh;
-    width: 100%;
-    padding: 10px 30px;
+.button-small:hover {
+    transition: 0.25s ease-in-out;
+    background-color: #a48a07;
+    color:#2B2922;
 }
-.div-left{
+
+
+/* hero container */
+.hero {
+    height: 30vh;
+    width: 100%;
+    background-color: #2B2922;
+}
+
+.img {
+    height: 40vh;
+    width: 100%;
+    /* background-color: red; */
+    float: left;
+    /* clip-path: polygon(0 40%, 100% 40%, 100% 90%, 0 90%); */
+
+}
+
+.div-left {
     width: 50%;
     float: left;
     height: 25vh;
-    background-color: blue;
 }
-.div-right{
+
+.div-right {
+    color: #5c5849;
+    position: relative;
     height: 25vh;
-    background-color: red;
-    width:50%;
+    width: 50%;
     float: right;
-    /* padding: 30px; */
     text-align: left;
 }
-.div-left h1{
+
+.div-left h1 {
     color: #fff;
     width: 80%;
     font-family: 'Montserrat', sans-serif;
- font-size:3.5rem;
- font-weight: 800;
- margin: auto;
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin: auto;
 }
-.div-right p{
+
+.div-right p {
+    /* position: absolute;
+    top: 50%;
+    left: 50%; */
+    /* transform: translate(-50%, -50%); */
     width: 50%;
-    background-color: green;
-    margin-top:10px;
+    margin-top: 10px;
     letter-spacing: 1px;
     line-height: 25px;
+    color: #fff;
+}
+
+
+/* bottom container */
+.bottom {
+    height: 10vh;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #2B2922;
+    color:#fff;
+}
+.left-arrow{
+    float: right;
+    margin-left: auto;
+    width: 5%;
+    height: 10vh;
+    background-color:#a48a07; 
+    display: inline-block;
+}
+.right-arrow{
+    float: right;
+    height: 10vh;
+    width: 5%;
+    background-color: #54534e;
+    display: inline-block;
+}
+.icons{
+    text-align: center;
+    font-size: 3rem;
+    padding: 6px 0 0 5px;
+}
+
+
+/* asdjustments for small screen devices */
+
+@media (max-width:900px){
+    .left-arrow, .right-arrow{
+        width: 10%;
+    }
+
+    .icons{
+        font-size:01rem;
+    }
+    .div-left h1{
+     font-size: 2rem;
+    }
+    .div-right p{
+        font-size: 0.7rem;
+        padding: 0;
+    }
+    .list{
+        display: none;
+    }
+    .navbar  div:last-of-type{
+        width: 35%;
+    }
 }
